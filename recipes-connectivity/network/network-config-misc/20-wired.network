@@ -1,0 +1,10 @@
+[Match]
+Name=eth0
+
+[Network]
+#DHCP=ipv4
+Address=10.0.10.2/24
+Gateway=10.0.10.1
+
+[DHCP]
+RouteMetric=10
