@@ -1,1 +1,1 @@
-PACKAGECONFIG_remove_sun7i = "xcomposite-egl xcomposite-glx wayland-egl wayland-glx"
+PACKAGECONFIG_remove_mx6 = "xcomposite-egl xcomposite-glx"

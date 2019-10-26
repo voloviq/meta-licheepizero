@@ -15,6 +15,7 @@ RDEPENDS_${PN} += " \
     qtbase-staticdev \
     qttranslations-qt \
     qttranslations-qtbase \
+    qttranslations-qtconfig \
     qttranslations-qthelp \
     qtconnectivity-dev \
     qtconnectivity-mkspecs \
@@ -61,3 +62,4 @@ RDEPENDS_${PN} += " \
     qtxmlpatterns-mkspecs \
     qttranslations-qtxmlpatterns \
 "
+
