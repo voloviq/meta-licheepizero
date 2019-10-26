@@ -77,9 +77,7 @@ TSLIB = " \
 "
 
 WIFI_SUPPORT = " \
-    crda \
     iw \
-    wireless-tools \
     wpa-supplicant \
 "
 
