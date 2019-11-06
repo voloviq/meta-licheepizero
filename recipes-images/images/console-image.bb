@@ -50,7 +50,6 @@ WIFI_SUPPORT = " \
     linux-firmware-rtl8192cu \
     linux-firmware-rtl8192su \
     linux-firmware-ralink \
-    wireless-tools \
     wpa-supplicant \
     bluez5 \
     wpa-supplicant-passphrase \
