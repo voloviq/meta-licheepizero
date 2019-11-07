@@ -75,7 +75,7 @@ or <br>
 	sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024 <br>
 
 ## Note:
-Be 100% sure to provide a valid device name. Wrong name "/dev/sde" dameage Your system file !
+Be 100% sure to provide a valid device name. Wrong name "/dev/sde" dameage Your system file ! <br>
 	of=/dev/sde
 
 # Limitation
