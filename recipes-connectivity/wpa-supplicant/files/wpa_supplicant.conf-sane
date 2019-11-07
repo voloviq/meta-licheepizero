@@ -1,0 +1,14 @@
+ctrl_interface=/var/run/wpa_supplicant
+ap_scan=1
+
+network={
+    key_mgmt=WPA-PSK 
+    ssid="2.4G-Provider-WiFi-9235F1"
+    psk="password"
+}
+
+# open network
+#network={
+#    key_mgmt=NONE
+#    ssid="<ssid>"
+#}

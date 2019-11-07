@@ -1,0 +1,25 @@
+diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
+index 00799b6..ec646af 100644
+--- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
++++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
+@@ -70,17 +70,19 @@
+ 		blue_led {
+ 			label = "licheepi:blue:usr";
+ 			gpios = <&pio 6 1 GPIO_ACTIVE_LOW>; /* PG1 */
++			linux,default-trigger = "cpu0";
+ 		};
+ 
+ 		green_led {
+ 			label = "licheepi:green:usr";
+ 			gpios = <&pio 6 0 GPIO_ACTIVE_LOW>; /* PG0 */
+-			default-state = "on";
++			linux,default-trigger = "mmc0";
+ 		};
+ 
+ 		red_led {
+ 			label = "licheepi:red:usr";
+ 			gpios = <&pio 6 2 GPIO_ACTIVE_LOW>; /* PG2 */
++			linux,default-trigger = "heartbeat";
+ 		};
+ 	};
+ 	panel: panel {
