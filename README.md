@@ -2,11 +2,6 @@
 
 # Yocto meta layer for Lichee Pi Zero and Lichee Pi Zero Dock
 
-## How to build an images
-
-General Note:
-Assumed that Linux Ubuntu is installed
-
 ### Product:
 
 ![Schematic](Lichee_Pi_Zero.png) <br>
@@ -15,6 +10,12 @@ Lichee Pi Zero <br>
 ![Schematic](Lichee_Pi_Zero_Dock.jpg) <br>
 Lichee Pi Zero Dock <br>
 <br>
+
+## How to build an images
+
+General Note:
+Assumed that Linux Ubuntu is installed
+
 1. First make sure to following packages are installed in system
 
 	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
