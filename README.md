@@ -2,7 +2,7 @@
 
 # Yocto meta layer for Lichee Pi Zero and Lichee Pi Zero Dock
 
-### Product:
+### Products:
 
 ![Schematic](Lichee_Pi_Zero.png) <br>
 Lichee Pi Zero <br>
@@ -15,6 +15,20 @@ Lichee Pi Zero Dock <br>
 
 General Note:
 Assumed that Linux Ubuntu is installed
+
+List of working elements(tested):
+
+WiFi works <br>
+Ethernet works <br>
+Lcd works <br>
+Touchscreen works <br>
+Led works <br>
+
+List of not tested elements:
+
+Bluetooth - appears during system boot up but not tested <br>
+Microphone - not tested <br>
+Headphone - not tested <br>
 
 1. First make sure to following packages are installed in system
 
