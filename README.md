@@ -67,3 +67,15 @@ BBLAYERS ?= " \
 	~/yocto/tmp/deploy/images/licheepizero <br>
 or <br>
 	~/yocto/tmp/deploy/images/licheepizero-dock <br>
+
+8. Insert SD CARD into dedicated CARD slot and issue following command to write an image
+
+	sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024 <br>
+	or <br>
+	sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024 <br>
+
+# Limitation
+
+	- sunxi_mali is probably not working <br>
+	- rootfs-resize not working (SD CARD size can be resize manualy) <br>
+	- no wiringpi or similar library to driver GPIO in C code
