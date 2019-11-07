@@ -7,6 +7,14 @@
 General Note:
 Assumed that Linux Ubuntu is installed
 
+Product:
+
+![Schematic](Lichee_Pi_Zero.png) <br>
+Lichee Pi Zero <br>
+<br>
+![Schematic](Lichee_Pi_Zero_Dock.jpg) <br>
+Lichee Pi Zero Dock <br>
+<br>
 1. First make sure to following packages are installed in system
 
 	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
