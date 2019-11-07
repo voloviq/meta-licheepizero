@@ -16,17 +16,17 @@ Assumed that Linux Ubuntu is installed
 
 ## List of tested elements
 
-WiFi works <br>
-Ethernet works <br>
-Lcd works <br>
-Touchscreen works <br>
-Led works <br>
+WiFi <br>
+Ethernet <br>
+Lcd <br>
+Touchscreen <br>
+Led  <br>
 
 ## List of not tested elements
 
-Bluetooth - appears during system boot up but not tested <br>
-Microphone - not tested <br>
-Headphone - not tested <br>
+Bluetooth - appears during system boot up <br>
+Microphone <br>
+Headphone <br>
 
 ## How to build an images
 
