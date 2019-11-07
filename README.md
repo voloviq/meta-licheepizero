@@ -70,7 +70,7 @@ or <br>
 
 8. Insert SD CARD into dedicated CARD slot and issue following command to write an image
 
-#### Note:
+Note:
 Be 100% sure to provide a valid device name. Wrong name "/dev/sde" dameage Your system file ! <br>
 	of=/dev/sde
 
