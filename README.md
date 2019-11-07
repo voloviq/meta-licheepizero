@@ -7,7 +7,7 @@
 General Note:
 Assumed that Linux Ubuntu is installed
 
-Product:
+### Product:
 
 ![Schematic](Lichee_Pi_Zero.png) <br>
 Lichee Pi Zero <br>
