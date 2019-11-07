@@ -11,12 +11,10 @@ Lichee Pi Zero <br>
 Lichee Pi Zero Dock <br>
 <br>
 
-## How to build an images
-
-General Note:
+## General Note:
 Assumed that Linux Ubuntu is installed
 
-List of working elements(tested):
+## List of tested elements
 
 WiFi works <br>
 Ethernet works <br>
@@ -24,11 +22,13 @@ Lcd works <br>
 Touchscreen works <br>
 Led works <br>
 
-List of not tested elements:
+## List of not tested elements
 
 Bluetooth - appears during system boot up but not tested <br>
 Microphone - not tested <br>
 Headphone - not tested <br>
+
+## How to build an images
 
 1. First make sure to following packages are installed in system
 
