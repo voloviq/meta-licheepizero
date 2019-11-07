@@ -70,9 +70,9 @@ or <br>
 
 8. Insert SD CARD into dedicated CARD slot and issue following command to write an image
 
-Note:
+Note: <br>
 Be 100% sure to provide a valid device name. Wrong name "/dev/sde" dameage Your system file ! <br>
-	of=/dev/sde <br>
+	of=/dev/sde <br> <br>
 	sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024 <br>
 	or <br>
 	sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024 <br>
