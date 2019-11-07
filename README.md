@@ -26,5 +26,5 @@ cd poky <br>
 3. Select directory to build Linux
 
 	source oe-init-build-env ~/yocto/build/licheepizero <br>
-or
+or <br>
 	source oe-init-build-env ~/yocto/build/licheepizero-dock <br>
