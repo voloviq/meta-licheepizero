@@ -33,6 +33,7 @@ FONTS = " \
     fontconfig \
     fontconfig-utils \
     liberation-fonts \
+    fonts \
 "
 
 QT_DEV_TOOLS = " \
@@ -66,6 +67,7 @@ UTILITIES_INSTALL = " \
     openssh-sftp \
     resize-rootfs \
     ppp \
+    tzdata \
 "
 
 TSLIB = " \

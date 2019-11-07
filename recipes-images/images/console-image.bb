@@ -33,6 +33,7 @@ UTILITIES_INSTALL = " \
     openssh-sftp \
     resize-rootfs \
     ppp \
+    tzdata \
 "
 
 TSLIB = " \
