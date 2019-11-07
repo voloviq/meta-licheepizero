@@ -49,6 +49,7 @@ BBLAYERS ?= " \
   ${HOME}/yocto/poky/meta-qt5 \
   ${HOME}/yocto/poky/meta-licheepizero \
   "
+    Note: Please adapt PATH of conf/bblayers.conf if necessary. <br>
 
 5. Modify local.conf file
 
