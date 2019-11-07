@@ -46,6 +46,7 @@ TSLIB = " \
 WIFI_SUPPORT = " \
     crda \
     iw \
+    rtl8723bs-wireless \
     linux-firmware-rtl8192ce \
     linux-firmware-rtl8192cu \
     linux-firmware-rtl8192su \

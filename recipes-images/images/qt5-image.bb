@@ -78,6 +78,7 @@ TSLIB = " \
 
 WIFI_SUPPORT = " \
     iw \
+    rtl8723bs-wireless \
     wpa-supplicant \
 "
 
