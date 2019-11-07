@@ -76,6 +76,6 @@ or <br>
 
 # Limitation
 
-	- sunxi_mali is probably not working <br>
-	- rootfs-resize not working (SD CARD size can be resize manualy) <br>
+	- sunxi_mali is probably not working
+	- rootfs-resize not working (SD CARD size can be resize manualy)
 	- no wiringpi or similar library to driver GPIO in C code
