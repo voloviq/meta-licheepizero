@@ -109,4 +109,4 @@ Be 100% sure to provide a valid device name (of=/dev/sde). Wrong name "/dev/sde"
 	- sunxi_mali is probably not working
 	- rootfs-resize not working (SD CARD size can be resized manualy)
 	- no wiringpi or similar library to driver GPIO in C code
-	- discover problem when wifi connected to access point (probably some drivers problems). Nevertheless wifi works.
+	- discover problem when WiFi connected to access point (probably some drivers problems). Nevertheless WiFi works.
