@@ -32,25 +32,26 @@ Headphone <br>
 
 1. First make sure to following packages are installed in system
 
-	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
-	build-essential chrpath socat libsdl1.2-dev xterm
+***	sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
+	build-essential chrpath socat libsdl1.2-dev xterm***
 
-Note:
+**Note:**
 More informations can be found on Yocto reference manual.
 
 2. Download necessary Yocto packaged listed below
 
-	git clone git://git.yoctoproject.org/poky --depth 1 -b zeus <br>
-cd poky <br>
-	git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus <br>
-	git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b zeus <br>
-	git clone <br>
+	***git clone git://git.yoctoproject.org/poky --depth 1 -b zeus*** <br>
+    ***cd poky*** <br>
+	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus*** <br>
+	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b zeus*** <br>
+	***git clone*** <br>
 
 3. Select directory to build Linux
 
-	source oe-init-build-env ~/yocto/build/licheepizero <br>
-or <br>
-	source oe-init-build-env ~/yocto/build/licheepizero-dock <br>
+    Zero version <br>
+	***source oe-init-build-env ~/yocto/build/licheepizero*** <br>
+    Zero Dock version <br>
+	***source oe-init-build-env ~/yocto/build/licheepizero-dock*** <br>
 
 4. Modify bblayers.conf PATH
 
@@ -78,7 +79,7 @@ BBLAYERS ?= " \
 6. Build objects
 
     - console image <br>
-      bitbake console-image <br>
+      ***bitbake console-image*** <br>
 
     - qt5 image <br>
       bitbake qt5-image <br>
@@ -88,18 +89,18 @@ BBLAYERS ?= " \
 
 7. After compilation images appears in
 
-	~/yocto/tmp/deploy/images/licheepizero <br>
+	*~/yocto/tmp/deploy/images/licheepizero* <br>
 or <br>
-	~/yocto/tmp/deploy/images/licheepizero-dock <br>
+	*~/yocto/tmp/deploy/images/licheepizero-dock* <br>
 
 8. Insert SD CARD into dedicated CARD slot and issue following command to write an image
 
 Note: <br>
-Be 100% sure to provide a valid device name. Wrong name "/dev/sde" dameage Your system file ! <br>
-	of=/dev/sde <br> <br>
-	sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024 <br>
-	or <br>
-	sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024 <br>
+Be 100% sure to provide a valid device name (of=/dev/sde). Wrong name "/dev/sde" dameage Your system file ! <br> <br>
+    Zero version <br>
+	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024*** <br>
+	Zero Dock verison <br>
+	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024*** <br>
 
 # Limitation
 
