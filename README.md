@@ -84,10 +84,10 @@ Headphone <br>
       ***bitbake console-image*** <br>
 
     - qt5 image <br>
-      bitbake qt5-image <br>
+      ***bitbake qt5-image*** <br>
 
     - qt5 toolchain sdk <br>
-      bitbake meta-toolchain-qt5 <br>
+      ***bitbake meta-toolchain-qt5*** <br>
 
 7. After compilation images appears in
 
