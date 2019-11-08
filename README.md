@@ -91,18 +91,19 @@ Headphone <br>
 
 7. After compilation images appears in
 
+    Zero version <br>
 	*~/yocto/tmp/deploy/images/licheepizero* <br>
-or <br>
+    Zero Dock version <br>
 	*~/yocto/tmp/deploy/images/licheepizero-dock* <br>
 
 8. Insert SD CARD into dedicated CARD slot and issue following command to write an image
 
-Note: <br>
-Be 100% sure to provide a valid device name (of=/dev/sde). Wrong name "/dev/sde" dameage Your system file ! <br> <br>
-    Zero version <br>
-	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024*** <br>
-	Zero Dock verison <br>
-	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024*** <br>
+    **Note:** <br>
+    Be 100% sure to provide a valid device name (of=/dev/**sde**). Wrong name "/dev/sde" dameage Your system file ! <br> <br>
+        Zero version <br>
+    	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero/qt5-image-licheepizero.sunxi-sdimg of=/dev/sde bs=1024*** <br>
+    	Zero Dock verison <br>
+    	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024*** <br>
 
 # Limitation
 
