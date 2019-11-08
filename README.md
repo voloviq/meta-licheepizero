@@ -63,8 +63,8 @@ Headphone <br>
       ${HOME}/yocto/poky/meta-openembedded/meta-networking \
       ${HOME}/yocto/poky/meta-openembedded/meta-python \
       ${HOME}/yocto/poky/meta-qt5 \
-      ${HOME}/yocto/poky/meta-licheepizero \<br>
-      "*
+      ${HOME}/yocto/poky/meta-licheepizero \
+      "*<br>
 
     **Note:** Please adapt PATH of conf/bblayers.conf if necessary. <br>
 
