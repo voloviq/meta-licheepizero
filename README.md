@@ -5,10 +5,10 @@
 ### Products:
 
 ![Schematic](Lichee_Pi_Zero.png) <br>
-Lichee Pi Zero <br>
+Lichee Pi Zero Version <br>
 <br>
 ![Schematic](Lichee_Pi_Zero_Dock.jpg) <br>
-Lichee Pi Zero Dock <br>
+Lichee Pi Zero Dock Version <br>
 <br>
 
 ## General Note:
