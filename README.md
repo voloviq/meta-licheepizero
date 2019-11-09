@@ -1,6 +1,6 @@
 # meta-licheepizero
 
-# Build image for Lichee Pi Zero and Lichee Pi Zero Dock in Yocto
+# Build an image for Lichee Pi Zero and Lichee Pi Zero Dock in Yocto
 
 ### Products:
 
