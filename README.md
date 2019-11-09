@@ -45,7 +45,7 @@ Headphone <br>
     ***cd poky*** <br>
 	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus*** <br>
 	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b zeus*** <br>
-	***git clone*** https://github.com/voloviq/meta-licheepizero <br>
+	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b zeus*** <br>
 
 3. Select directory to build Linux
 
