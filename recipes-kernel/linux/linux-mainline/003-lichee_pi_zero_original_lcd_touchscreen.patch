@@ -1,11 +1,27 @@
-diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 62d762d..00799b6 100644
---- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-+++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-@@ -133,6 +133,16 @@
- 	status = "ok";
- };
- 
+diff --git b/arch/arm/boot/dts/lichee_pi_zero_original_lcd_touchscreen.dtsi b/arch/arm/boot/dts/lichee_pi_zero_original_lcd_touchscreen.dtsi
+new file mode 100644
+index 0000000..8d2ea87
+--- /dev/null
++++ b/arch/arm/boot/dts/lichee_pi_zero_original_lcd_touchscreen.dtsi
+@@ -0,0 +1,27 @@
++/**
++*    @mainpage Dts for original Touchscreen of Lichee Pi Zero LCD
++*
++*    @author Michal Wolowik Embedded System Labs
++*    @date Warsaw 07/XI/2019
++*
++*    @copyright
++*        This library is free software; you can redistribute it and/or
++*        modify it under the terms of the GNU Lesser General Public
++*        License as published by the Free Software Foundation; either
++*        version 2.1 of the License, or (at your option) any later version.
++*    @copyright
++*        This library is distributed in the hope that it will be useful,
++*        but WITHOUT ANY WARRANTY; without even the implied warranty of
++*        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++*        Lesser General Public License for more details.
++*/
++
 +&i2c0 {
 +	status = "okay";
 +	ns2009: touchscreen@48 {
@@ -15,10 +31,6 @@ index 62d762d..00799b6 100644
 +		touchscreen-fuzz-y = <8>;
 +	};
 +};
-+
- &uart0 {
- 	pinctrl-0 = <&uart0_pb_pins>;
- 	pinctrl-names = "default";
 diff --git a/drivers/input/touchscreen/Kconfig b/drivers/input/touchscreen/Kconfig
 index fb91f2d..e505c55 100644
 --- a/drivers/input/touchscreen/Kconfig

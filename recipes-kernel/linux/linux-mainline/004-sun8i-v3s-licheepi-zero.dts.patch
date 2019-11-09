@@ -1,8 +1,24 @@
 diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 00799b6..ec646af 100644
+index 2e4587d..90984e7 100644
 --- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-@@ -70,17 +70,19 @@
+@@ -43,12 +43,15 @@
+ /dts-v1/;
+ #include "sun8i-v3s.dtsi"
+ #include "sunxi-common-regulators.dtsi"
++#include "original_lichee_pi_zero_lcd_display.dtsi"
++#include "lichee_pi_zero_original_lcd_touchscreen.dtsi"
+ 
+ / {
+ 	model = "Lichee Pi Zero";
+ 	compatible = "licheepi,licheepi-zero", "allwinner,sun8i-v3s";
+ 
+ 	aliases {
++		ethernet0 = &emac;
+ 		serial0 = &uart0;
+ 	};
+ 
+@@ -62,17 +65,19 @@
  		blue_led {
  			label = "licheepi:blue:usr";
  			gpios = <&pio 6 1 GPIO_ACTIVE_LOW>; /* PG1 */
@@ -22,4 +38,4 @@ index 00799b6..ec646af 100644
 +			linux,default-trigger = "heartbeat";
  		};
  	};
- 	panel: panel {
+ };

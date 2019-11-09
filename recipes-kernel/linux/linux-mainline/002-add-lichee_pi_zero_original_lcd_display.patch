@@ -1,0 +1,87 @@
+diff --git b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi
+new file mode 100644
+index 0000000..fe06bad
+--- /dev/null
++++ b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi
+@@ -0,0 +1,81 @@
++/**
++*    @mainpage Dts for LCD TFT 800x480 Original Lichee Pi Zero LCD
++*
++*    @author Michal Wolowik Embedded System Labs
++*    @date Warsaw 07/XI/2019
++*
++*    @copyright
++*        This library is free software; you can redistribute it and/or
++*        modify it under the terms of the GNU Lesser General Public
++*        License as published by the Free Software Foundation; either
++*        version 2.1 of the License, or (at your option) any later version.
++*    @copyright
++*        This library is distributed in the hope that it will be useful,
++*        but WITHOUT ANY WARRANTY; without even the implied warranty of
++*        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
++*        Lesser General Public License for more details.
++*/
++#include "sun8i-v3s.dtsi"
++#include "sunxi-common-regulators.dtsi"
++
++/ {
++
++vdd_bl: regulator@0 {
++	compatible = "regulator-fixed";
++	regulator-name = "bl-3v3";
++	regulator-min-microvolt = <3300000>;
++	regulator-max-microvolt = <3300000>;
++	regulator-always-on;
++};
++
++backlight: backlight {
++	compatible = "pwm-backlight";
++	pwms = <&pwm 0 50000 0>;
++	brightness-levels = <50 55 60 65 70 75 80 85 90 95 100>;
++	default-brightness-level = <8>;
++	power-supply = <&vdd_bl>;
++	status = "okay";
++};
++
++panel: panel {
++	compatible = "rocktech,rk070er9427", "simple-panel";
++	power-supply = <&vdd_bl>;
++	backlight = <&backlight>;
++	#address-cells = <1>;
++	#size-cells = <0>;
++
++	port@0 {
++			reg = <0>;
++			#address-cells = <1>;
++			#size-cells = <0>;
++
++			panel_input: endpoint@0 {
++				reg = <0>;
++				remote-endpoint = <&tcon0_out_lcd>;
++			};
++		};
++	};
++};
++
++&de {
++	status = "okay";
++};
++
++&tcon0 {
++	pinctrl-names = "default";
++	pinctrl-0 = <&lcd_rgb666_pins>;
++	status = "okay";
++};
++
++&tcon0_out {
++	tcon0_out_lcd: endpoint@0 {
++		reg = <0>;
++		remote-endpoint = <&panel_input>;
++	};
++};
++
++&pwm {
++	pinctrl-0 = <&pwm0_pins>;
++	pinctrl-names = "default";
++	status = "okay";
++};
