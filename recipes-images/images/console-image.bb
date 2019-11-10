@@ -36,22 +36,9 @@ UTILITIES_INSTALL = " \
     tzdata \
 "
 
-TSLIB = " \
-    tslib \
-    tslib-calibrate \
-    tslib-conf \
-    tslib-dev \
-    tslib-tests \
-"
-
 WIFI_SUPPORT = " \
-    crda \
     iw \
     rtl8723bs-wireless \
-    linux-firmware-rtl8192ce \
-    linux-firmware-rtl8192cu \
-    linux-firmware-rtl8192su \
-    linux-firmware-ralink \
     wpa-supplicant \
     bluez5 \
     wpa-supplicant-passphrase \
@@ -67,7 +54,6 @@ IMAGE_INSTALL += " \
   ${NETWORK_APP} \
   ${WIFI_SUPPORT} \
   ${KERNEL_EXTRA_INSTALL} \
-  ${TSLIB} \
 "
 
 #Always add cmake to sdk
