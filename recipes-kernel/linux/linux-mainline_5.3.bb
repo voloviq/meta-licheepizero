@@ -26,8 +26,8 @@ SRC_URI[sha256sum] = "69beef77f43b31a81f7b13750a189ab088589c64b79ce0d6d62c3d922e
 
 SRC_URI = "https://git.kernel.org/torvalds/t/linux-${PV}.tar.gz \
 	file://001-modify-sun8i-v3s.dtsi.patch \
-	file://002-add-original_lichee_pi_zero_lcd_display.dtsi.patch \
-	file://003-add-lichee_pi_zero_original_lcd_touchscreen.dtsi.patch \
+	file://002-add-original-lichee-pi-zero-lcd-display.dtsi.patch \
+	file://003-add-original-lichee-pi-zero-lcd-touchscreen.dtsi.patch \
 	file://004-modify-sun8i-v3s-licheepi-zero.dts.patch \
 	file://005-modify-sun8i-v3s-licheepi-zero-dock.dts.patch \
   	file://defconfig \
