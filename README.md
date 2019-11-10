@@ -1,6 +1,6 @@
 # meta-licheepizero
 
-# Instruction how to build an image for Lichee Pi Zero and Lichee Pi Zero Dock in Yocto
+## Instruction how to build an image for Lichee Pi Zero and Lichee Pi Zero Dock in Yocto
 
 ### Products:
 
