@@ -56,7 +56,7 @@ Headphone <br>
 4. Modify bblayers.conf(located in ~/yocto/build/licheepizero/conf(or licheepizero-dock/conf)) PATH if necessary
 
     *BBLAYERS ?= " \
-      ${HOME}/yocto/poky/meta <\>
+      ${HOME}/yocto/poky/meta "\"
       ${HOME}/yocto/poky/meta-poky
       ${HOME}/yocto/poky/meta-openembedded/meta-oe
       ${HOME}/yocto/poky/meta-openembedded/meta-networking
