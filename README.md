@@ -33,8 +33,7 @@ Headphone <br>
 
 1. First make sure to following packages are installed in system
 
-    ***sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
-	   build-essential chrpath socat libsdl1.2-dev xterm***
+    ***sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib build-essential chrpath socat libsdl1.2-dev xterm***
 
     **Note:**
     More informations can be found on Yocto reference manual.
@@ -57,13 +56,13 @@ Headphone <br>
 4. Modify bblayers.conf(located in ~/yocto/build/licheepizero/conf(or licheepizero-dock/conf)) PATH if necessary
 
     *BBLAYERS ?= " \
-      ${HOME}/yocto/poky/meta \
-      ${HOME}/yocto/poky/meta-poky \
-      ${HOME}/yocto/poky/meta-openembedded/meta-oe \
-      ${HOME}/yocto/poky/meta-openembedded/meta-networking \
-      ${HOME}/yocto/poky/meta-openembedded/meta-python \
-      ${HOME}/yocto/poky/meta-qt5 \
-      ${HOME}/yocto/poky/meta-licheepizero \
+      ${HOME}/yocto/poky/meta '\'
+      ${HOME}/yocto/poky/meta-poky '\'
+      ${HOME}/yocto/poky/meta-openembedded/meta-oe '\'
+      ${HOME}/yocto/poky/meta-openembedded/meta-networking '\'
+      ${HOME}/yocto/poky/meta-openembedded/meta-python '\'
+      ${HOME}/yocto/poky/meta-qt5 '\'
+      ${HOME}/yocto/poky/meta-licheepizero '\'
       "*<br>
 
     **Note:** Please adapt PATH of conf/bblayers.conf if necessary. <br>
@@ -72,11 +71,15 @@ Headphone <br>
 
     - modify line with "MACHINE ??" to add "licheepizero-dock" or "licheepizero"
 
-    - align *DL_DIR ?= "${HOME}/yocto/downloads"* <br>
+    - align *DL_DIR = "${HOME}/yocto/downloads"* <br>
 
-    - align *SSSTATE_DIR ?= "${HOME}/yocto/sstate-cache"* <br>
+    - align *SSSTATE_DIR = "${HOME}/yocto/sstate-cache"* <br>
     
-    - align *TMPDIR ?= "${HOME}/yocto/tmp"* <br>
+    - align *TMPDIR = "${HOME}/yocto/tmp"* <br>
+    
+    - add at the end following records <br>
+    	**RM_OLD_IMAGE = "1"** <br>
+	**INHERIT += "rm_work"** <br>
 
     **Note:** Please adapt rest of conf/local.conf parameters if necessary. <br>
 
