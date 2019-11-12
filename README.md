@@ -77,9 +77,9 @@ Headphone <br>
     
     - align *TMPDIR = "${HOME}/yocto/tmp"* <br>
     
-    - add at the end following records <br>
-    	**RM_OLD_IMAGE = "1"** <br>
-	**INHERIT += "rm_work"** <br>
+    - add at the end following records <br> <br>
+    	*RM_OLD_IMAGE = "1"* <br>
+	*INHERIT += "rm_work"* <br>
 
     **Note:** Please adapt rest of conf/local.conf parameters if necessary. <br>
 
