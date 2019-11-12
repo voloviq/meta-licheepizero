@@ -73,7 +73,7 @@ Headphone <br>
 
     - align *DL_DIR = "${HOME}/yocto/downloads"* <br>
 
-    - align *SSSTATE_DIR = "${HOME}/yocto/sstate-cache"* <br>
+    - align *SSTATE_DIR = "${HOME}/yocto/sstate-cache"* <br>
     
     - align *TMPDIR = "${HOME}/yocto/tmp"* <br>
     
