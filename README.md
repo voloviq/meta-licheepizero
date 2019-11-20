@@ -53,7 +53,7 @@ Headphone <br>
     Zero Dock version <br>
 	***source oe-init-build-env ~/yocto/build/licheepizero-dock*** <br>
 
-4. Modify bblayers.conf(located in ~/yocto/build/licheepizero/conf(or licheepizero-dock/conf)) PATH if necessary
+4. Modify bblayers.conf(located in ~/yocto/build/licheepizero/conf(or licheepizero-dock/conf))
 
     *BBLAYERS ?= " \\\
       ${HOME}/yocto/poky/meta \\\
