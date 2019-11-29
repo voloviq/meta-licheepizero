@@ -40,10 +40,10 @@ Headphone <br>
 
 2. Download necessary Yocto packaged listed below
 
-        ***mkdir yocto***
-	***cd yocto***
+	***mkdir yocto***<br>
+	***cd yocto*** <br>
 	***git clone git://git.yoctoproject.org/poky --depth 1 -b zeus*** <br>
-    ***cd poky*** <br>
+        ***cd poky*** <br>
 	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus*** <br>
 	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b zeus*** <br>
 	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b zeus*** <br>
