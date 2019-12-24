@@ -99,14 +99,6 @@ IMAGE_INSTALL += " \
 #Always add cmake to sdk
 TOOLCHAIN_HOST_TASK_append = " nativesdk-cmake"
 
-#Always add cmake to sdk
-TOOLCHAIN_HOST_TASK_append = " nativesdk-cmake"
-
 DISTRO_FEATURES_remove = " x11 wayland opengl pulseaudio opengles egl xcb "
 PACKAGECONFIG_DISTRO_append_pn_qtbase = " linuxfb tslib "
 IMAGE_INSTALL_append = " qtbase qtbase-plugins "
-
-DISTRO_FEATURES_remove = " x11 wayland opengl pulseaudio opengles egl xcb "
-# PACKAGECONFIG_DISTRO_append_pn_qtbase = " linuxfb tslib "
-# IMAGE_INSTALL_append = " qtbase qtbase-plugins "
-# CORE_IMAGE_EXTRA_INSTALL = "python-core python-pip"
