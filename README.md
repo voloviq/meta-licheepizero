@@ -38,7 +38,7 @@ Headphone <br>
     **Note:**
     More informations can be found on Yocto reference manual.
 
-2. Download necessary Yocto packaged listed below
+2. Download necessary Yocto packaged listed below. Be sure to be im root of home folder.
 
 	***mkdir yocto***<br>
 	***cd yocto*** <br>
