@@ -42,6 +42,7 @@ Headphone <br>
 
 	***mkdir yocto***<br>
 	***cd yocto*** <br>
+	***mkdir build*** <br>
 	***git clone git://git.yoctoproject.org/poky --depth 1 -b zeus*** <br>
         ***cd poky*** <br>
 	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus*** <br>
