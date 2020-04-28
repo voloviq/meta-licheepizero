@@ -19,6 +19,7 @@ SYSTEM_TOOLS_INSTALL = " \
     sysbench \
     tzdata \
     devmem2 \
+    rsync \
     minicom \
 "
 
