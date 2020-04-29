@@ -1,4 +1,4 @@
-DESCRIPTION = "A QT5 image with wifi support application for SoMLabs Board"
+DESCRIPTION = "A QT5 image with wifi support application for Lichee Pi Zero Zero-Dock Boards"
 LICENSE = "MIT"
 
 NETWORK_APP = " \
@@ -43,11 +43,13 @@ QT_DEV_TOOLS = " \
     qtbase-tools \
     qtserialport-dev \
     qtserialport-mkspecs \
+    qtquickcontrols-qmlplugins \
 "
 
 KERNEL_EXTRA_INSTALL = " \
     kernel-devicetree \
     kernel-modules \
+    sunxi-mali \
  "
 
 DEV_TOOLS_INSTALL = " \
@@ -86,6 +88,7 @@ WIFI_SUPPORT = " \
 "
 
 IMAGE_INSTALL += " \
+  ${QT_DEV_TOOLS} \
   ${DEV_TOOLS_INSTALL} \
   ${SYSTEM_TOOLS_INSTALL} \
   ${UTILITIES_INSTALL} \
@@ -100,6 +103,5 @@ IMAGE_INSTALL += " \
 #Always add cmake to sdk
 TOOLCHAIN_HOST_TASK_append = " nativesdk-cmake"
 
-DISTRO_FEATURES_remove = " x11 wayland opengl pulseaudio opengles egl xcb "
 PACKAGECONFIG_DISTRO_append_pn_qtbase = " linuxfb tslib "
 IMAGE_INSTALL_append = " qtbase qtbase-plugins "
