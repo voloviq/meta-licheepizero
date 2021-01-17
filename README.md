@@ -43,11 +43,11 @@ Headphone <br>
 	***mkdir yocto***<br>
 	***cd yocto*** <br>
 	***mkdir build*** <br>
-	***git clone git://git.yoctoproject.org/poky --depth 1 -b zeus*** <br>
+	***git clone git://git.yoctoproject.org/poky --depth 1 -b dunfell*** <br>
         ***cd poky*** <br>
-	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b zeus*** <br>
-	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b zeus*** <br>
-	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b zeus*** <br>
+	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b dunfell*** <br>
+	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b dunfell*** <br>
+	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b dunfell*** <br>
 
 3. Select directory to build Linux
 
