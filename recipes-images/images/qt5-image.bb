@@ -26,6 +26,7 @@ SYSTEM_TOOLS_INSTALL = " \
     alsa-plugins \
     alsa-tools \
     alsa-utils \
+    pulseaudio \
 "
 
 QT_TOOLS = " \
