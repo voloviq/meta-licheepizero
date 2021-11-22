@@ -22,9 +22,11 @@ Lcd <br>
 Touchscreen <br>
 Led  <br>
 Backlight for Lcd <br>
+Microphone <br>
+Headphones <br>
 
 ## List of not tested elements
-
+SPI Flash - no U-Boot support, no Kernel support <br>
 Bluetooth - appears during system boot up <br>
 
 ## How to build an images
