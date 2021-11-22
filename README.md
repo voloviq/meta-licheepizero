@@ -115,15 +115,15 @@ Headphone <br>
     	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024*** <br>
 
 # Audio
-To play mp3 or ogg files type
-	mpv ogg-file-name.ogg
-	mpv mp3-file-name.ogg
-To change volume
-	amixer set Headphone 10%+
-	amixer set Headphone 10%-
-	
-Amixer available options
-	amixer scontrols
+To play mp3 or ogg files type <br>
+	mpv ogg-file-name.ogg <br>
+	mpv mp3-file-name.ogg <br>
+To change volume <br>
+	amixer set Headphone 10%+ <br>
+	amixer set Headphone 10%- <br>
+
+Amixer available options <br>
+	amixer scontrols <br>
 
 # Limitation
 
