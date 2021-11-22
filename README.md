@@ -115,8 +115,9 @@ Headphone <br>
 
 # Audio<br>
 To play mp3 or ogg files type <br>
-mpv ogg-file-name.ogg <br>
-mpv mp3-file-name.ogg <br>
+	***mpv ogg-file-name.ogg*** <br>
+	***mpv mp3-file-name.mp3*** <br>
+	***cvlc mp3-file-name.mp3*** <br>
 To change volume <br>
 	***amixer set Headphone 10%+*** <br>
 	***amixer set Headphone 10%-*** <br>
