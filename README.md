@@ -26,8 +26,6 @@ Backlight for Lcd <br>
 ## List of not tested elements
 
 Bluetooth - appears during system boot up <br>
-Microphone <br>
-Headphone <br>
 
 ## How to build an images
 
@@ -126,7 +124,13 @@ To change volume <br>
 
 Amixer available options <br>
 	amixer scontrols <br>
-
+	
+Microphone on <br>
+	amixer -c 0 cset numid=12 2 <br>
+	
+Record some voice from microphone <br>
+	arecord -D hw:0,0 -d 3 -f S16_LE -r 16000 tmp.wav <br>
+	
 # Limitation
 
 	- sunxi_mali is probably not working
