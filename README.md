@@ -121,6 +121,8 @@ To play mp3 or ogg files type <br>
 To change volume <br>
 	amixer set Headphone 10%+ <br>
 	amixer set Headphone 10%- <br>
+	or just <br>
+	amixer set Headphone 10% <br>
 
 Amixer available options <br>
 	amixer scontrols <br>
