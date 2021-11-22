@@ -113,6 +113,25 @@ Headphone <br>
     	Zero Dock verison <br>
     	***sudo dd if=~/yocto/tmp/deploy/images/licheepizero-dock/qt5-image-licheepizero-dock.sunxi-sdimg of=/dev/sde bs=1024*** <br>
 
+# Audio<br>
+To play mp3 or ogg files type <br>
+mpv ogg-file-name.ogg <br>
+mpv mp3-file-name.ogg <br>
+To change volume <br>
+	***amixer set Headphone 10%+*** <br>
+	***amixer set Headphone 10%-*** <br>
+or just <br>
+	***amixer set Headphone 10%*** <br>
+<br>
+Amixer available options <br>
+	***amixer scontrols*** <br>
+<br>
+Microphone on <br>
+	***amixer -c 0 cset numid=12 2*** <br>
+<br>
+Record some voice from microphone <br>
+	***arecord -D hw:0,0 -d 3 -f S16_LE -r 16000 tmp.wav*** <br>
+<br>
 # Limitation
 
 	- sunxi_mali is probably not working
