@@ -21,13 +21,13 @@ SYSTEM_TOOLS_INSTALL = " \
     devmem2 \
     rsync \
     minicom \
-    mpg123 \
     alsa-lib \
     alsa-plugins \
     alsa-tools \
     alsa-utils \
     pulseaudio \
     mpv \
+    vlc \
 "
 
 QT_TOOLS = " \
