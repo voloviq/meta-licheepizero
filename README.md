@@ -132,6 +132,10 @@ Microphone on <br>
 Record some voice from microphone <br>
 	***arecord -D hw:0,0 -d 3 -f S16_LE -r 16000 tmp.wav*** <br>
 <br>
+To get sound device info <br>
+	***ls /dev/snd*** <br>
+
+<br>
 # Limitation
 
 	- sunxi_mali is probably not working
