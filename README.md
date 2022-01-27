@@ -22,12 +22,12 @@ Lcd <br>
 Touchscreen <br>
 Led  <br>
 Backlight for Lcd <br>
+Microphone <br>
+Headphone <br>
 
 ## List of not tested elements
 
 Bluetooth - appears during system boot up <br>
-Microphone <br>
-Headphone <br>
 
 ## How to build an images
 
