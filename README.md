@@ -64,6 +64,7 @@ Bluetooth - appears during system boot up <br>
       ${HOME}/yocto/poky/meta-openembedded/meta-oe \\\
       ${HOME}/yocto/poky/meta-openembedded/meta-networking \\\
       ${HOME}/yocto/poky/meta-openembedded/meta-python \\\
+      ${HOME}/yocto/poky/meta-openembedded/meta-multimedia \\\
       ${HOME}/yocto/poky/meta-qt5 \\\
       ${HOME}/yocto/poky/meta-licheepizero \\\
       "*<br>
