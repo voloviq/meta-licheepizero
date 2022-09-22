@@ -16,17 +16,17 @@ Assumed that Linux Ubuntu is installed
 
 ## List of tested elements
 
+
+## List of not tested elements
+
 WiFi <br>
 Ethernet <br>
 Lcd <br>
-Touchscreen <br>
+Touchscreen(no support in the 5.15) <br>
 Led  <br>
 Backlight for Lcd <br>
 Microphone <br>
 Headphone <br>
-
-## List of not tested elements
-
 Bluetooth - appears during system boot up <br>
 
 ## How to build an images
@@ -43,11 +43,11 @@ Bluetooth - appears during system boot up <br>
 	***mkdir yocto***<br>
 	***cd yocto*** <br>
 	***mkdir build*** <br>
-	***git clone git://git.yoctoproject.org/poky --depth 1 -b dunfell*** <br>
+	***git clone git://git.yoctoproject.org/poky --depth 1 -b kirkstone*** <br>
         ***cd poky*** <br>
-	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b dunfell*** <br>
-	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b dunfell*** <br>
-	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b dunfell*** <br>
+	***git clone git://git.openembedded.org/meta-openembedded --depth 1 -b kirkstone*** <br>
+	***git clone https://github.com/meta-qt5/meta-qt5.git --depth 1 -b kirkstone*** <br>
+	***git clone https://github.com/voloviq/meta-licheepizero --depth 1 -b kirkstone*** <br>
 
 3. Select directory to build Linux
 
