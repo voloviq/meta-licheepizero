@@ -84,6 +84,8 @@ Bluetooth - appears during system boot up <br>
     - add at the end following records <br> <br>
     	*RM_OLD_IMAGE = "1"* <br>
 	*INHERIT += "rm_work"* <br>
+	*MACHINEOVERRIDES .= ":use-mailine-graphics"* <br>
+	*LICENSE_FLAGS_ACCEPTED = "commercial"* <br>
 
     **Note:** Please adapt rest of conf/local.conf parameters if necessary. <br>
 
