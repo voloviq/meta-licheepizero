@@ -61,9 +61,5 @@ RDEPENDS_${PN} += " \
     qtxmlpatterns-dev \
     qtxmlpatterns-mkspecs \
     qttranslations-qtxmlpatterns \
-    qtquickcontrols-qmlplugins \
-    qtquick1 \
-    qtquick1-qmlplugins \
-    qtquick1-plugins \
 "
 

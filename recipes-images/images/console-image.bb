@@ -57,7 +57,7 @@ IMAGE_INSTALL += " \
 "
 
 #Always add cmake to sdk
-TOOLCHAIN_HOST_TASK_append = " nativesdk-cmake"
+#TOOLCHAIN_HOST_TASK:append = " nativesdk-cmake"
 
-DISTRO_FEATURES_remove = " x11 wayland opengl pulseaudio opengles egl xcb "
-PACKAGECONFIG_DISTRO_append_pn_qtbase = " linuxfb tslib "
+#DISTRO_FEATURES:remove = " x11 wayland opengl pulseaudio opengles egl xcb "
+PACKAGECONFIG_DISTRO:append_pn_qtbase = " linuxfb tslib "

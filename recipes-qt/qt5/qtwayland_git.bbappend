@@ -1,1 +1,1 @@
-PACKAGECONFIG_remove_mx6 = "xcomposite-egl xcomposite-glx"
+PACKAGECONFIG:remove:mx6 = "xcomposite-egl xcomposite-glx"

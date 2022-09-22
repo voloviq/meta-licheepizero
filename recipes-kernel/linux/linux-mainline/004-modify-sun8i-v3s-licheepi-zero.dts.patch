@@ -1,5 +1,5 @@
 diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 2e4587d..90984e7 100644
+index 2e4587d..afed9f1 100644
 --- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 @@ -43,12 +43,15 @@
@@ -7,7 +7,7 @@ index 2e4587d..90984e7 100644
  #include "sun8i-v3s.dtsi"
  #include "sunxi-common-regulators.dtsi"
 +#include "original_lichee_pi_zero_lcd_display.dtsi"
-+#include "lichee_pi_zero_original_lcd_touchscreen.dtsi"
++//#include "lichee_pi_zero_original_lcd_touchscreen.dtsi"
  
  / {
  	model = "Lichee Pi Zero";
@@ -39,3 +39,33 @@ index 2e4587d..90984e7 100644
  		};
  	};
  };
+diff --git a/arch/arm/boot/dts/sun8i-v3s.dtsi b/arch/arm/boot/dts/sun8i-v3s.dtsi
+index 084323d..47fc392 100644
+--- a/arch/arm/boot/dts/sun8i-v3s.dtsi
++++ b/arch/arm/boot/dts/sun8i-v3s.dtsi
+@@ -368,6 +368,25 @@
+ 				pins = "PE1";
+ 				function = "csi";
+ 			};
++			
++			lcd_rgb666_pins: lcd-rgb666-pins {
++				pins = "PE0", "PE1", "PE2", "PE3", "PE4",
++			       "PE5", "PE6", "PE7", "PE8", "PE9",
++			       "PE10", "PE11", "PE12", "PE13", "PE14",
++			       "PE15", "PE16", "PE17", "PE18", "PE19",
++			       "PE23", "PE24";
++			 	function = "lcd";
++		        };
++		        
++			pwm1_pins: pwm1-pins{
++				pins = "PB5";
++				function = "pwm1";
++			};
++
++			pwm0_pins: pwm0-pins {
++				pins = "PB4";
++				function = "pwm0";
++			};
+ 
+ 			i2c0_pins: i2c0-pins {
+ 				pins = "PB6", "PB7";

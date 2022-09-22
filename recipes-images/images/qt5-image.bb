@@ -56,7 +56,6 @@ QT_DEV_TOOLS = " \
 KERNEL_EXTRA_INSTALL = " \
     kernel-devicetree \
     kernel-modules \
-    sunxi-mali \
  "
 
 DEV_TOOLS_INSTALL = " \
@@ -107,8 +106,5 @@ IMAGE_INSTALL += " \
   ${TSLIB} \
 "
 
-#Always add cmake to sdk
-TOOLCHAIN_HOST_TASK_append = " nativesdk-cmake"
-
-PACKAGECONFIG_DISTRO_append_pn_qtbase = " linuxfb tslib "
-IMAGE_INSTALL_append = " qtbase qtbase-plugins "
+PACKAGECONFIG_DISTRO:append_pn_qtbase = " linuxfb tslib "
+IMAGE_INSTALL:append = " qtbase qtbase-plugins "

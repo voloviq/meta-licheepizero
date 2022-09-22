@@ -1,9 +1,9 @@
 diff --git b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi
 new file mode 100644
-index 0000000..fe06bad
+index 0000000..e21dc77
 --- /dev/null
 +++ b/arch/arm/boot/dts/original_lichee_pi_zero_lcd_display.dtsi
-@@ -0,0 +1,81 @@
+@@ -0,0 +1,79 @@
 +/**
 +*    @mainpage Dts for LCD TFT 800x480 Original Lichee Pi Zero LCD
 +*
@@ -21,8 +21,6 @@ index 0000000..fe06bad
 +*        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
 +*        Lesser General Public License for more details.
 +*/
-+#include "sun8i-v3s.dtsi"
-+#include "sunxi-common-regulators.dtsi"
 +
 +/ {
 +

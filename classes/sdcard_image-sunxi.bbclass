@@ -13,11 +13,14 @@ inherit image_types
 #
 #
 
+# Use an uncompressed ext4 by default as rootfs
+SDIMG_ROOTFS_TYPE ?= "ext4"
+
 # This image depends on the rootfs image
-IMAGE_TYPEDEP_sunxi-sdimg = "${SDIMG_ROOTFS_TYPE}"
+IMAGE_TYPEDEP:sunxi-sdimg = "${SDIMG_ROOTFS_TYPE}"
 
 # Boot partition volume id
-BOOTDD_VOLUME_ID ?= "${MACHINE}"
+BOOTDD_VOLUME_ID ?= "boot"
 
 # Boot partition size [in KiB]
 BOOT_SPACE ?= "40960"
@@ -25,8 +28,6 @@ BOOT_SPACE ?= "40960"
 # First partition begin at sector 2048 : 2048*1024 = 2097152
 IMAGE_ROOTFS_ALIGNMENT = "2048"
 
-# Use an uncompressed ext4 by default as rootfs
-SDIMG_ROOTFS_TYPE ?= "ext4"
 SDIMG_ROOTFS = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.${SDIMG_ROOTFS_TYPE}"
 
 do_image_sunxi_sdimg[depends] += " \
@@ -40,7 +41,7 @@ do_image_sunxi_sdimg[depends] += " \
 # SD card image name
 SDIMG = "${IMGDEPLOYDIR}/${IMAGE_NAME}.rootfs.sunxi-sdimg"
 
-IMAGE_CMD_sunxi-sdimg () {
+IMAGE_CMD:sunxi-sdimg () {
 
 	# Align partitions
 	BOOT_SPACE_ALIGNED=$(expr ${BOOT_SPACE} + ${IMAGE_ROOTFS_ALIGNMENT} - 1)
@@ -94,6 +95,10 @@ IMAGE_CMD_sunxi-sdimg () {
 	then
 		mcopy -i ${WORKDIR}/boot.img -s ${DEPLOY_DIR_IMAGE}/boot.scr ::boot.scr
 	fi
+        if [ -e "${DEPLOY_DIR_IMAGE}/splash.bmp" ]
+        then
+                mcopy -i ${WORKDIR}/boot.img -s ${DEPLOY_DIR_IMAGE}/splash.bmp ::splash.bmp
+        fi
 
 
 	# Add stamp file
@@ -116,7 +121,7 @@ IMAGE_CMD_sunxi-sdimg () {
 }
 
 # write uboot.itb for arm64 boards
-IMAGE_CMD_sunxi-sdimg_append_sun50i () {
+IMAGE_CMD_sunxi-sdimg:append:sun50i () {
 	if [ -e "${DEPLOY_DIR_IMAGE}/${UBOOT_BINARY}" ]
 	then
 		dd if=${DEPLOY_DIR_IMAGE}/${UBOOT_BINARY} of=${SDIMG} bs=1024 seek=40 conv=notrunc

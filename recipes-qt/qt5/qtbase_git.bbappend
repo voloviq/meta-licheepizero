@@ -1,2 +1,2 @@
-PACKAGECONFIG_append = "accessibility fontconfig linuxfb tslib"
-PACKAGECONFIG_remove = "examples tests"
+PACKAGECONFIG:append = "accessibility fontconfig linuxfb tslib"
+PACKAGECONFIG:remove = "examples tests"
