@@ -22,7 +22,7 @@ Assumed that Linux Ubuntu is installed
 WiFi <br>
 Ethernet <br>
 Lcd <br>
-Touchscreen(no support in the 5.15) <br>
+Touchscreen(no driver support in the 5.15) <br>
 Led  <br>
 Backlight for Lcd <br>
 Microphone <br>
@@ -64,6 +64,7 @@ Bluetooth - appears during system boot up <br>
       ${HOME}/yocto/poky/meta-openembedded/meta-oe \\\
       ${HOME}/yocto/poky/meta-openembedded/meta-networking \\\
       ${HOME}/yocto/poky/meta-openembedded/meta-python \\\
+      ${HOME}/yocto/poky/meta-openembedded/meta-multimedia \\\
       ${HOME}/yocto/poky/meta-qt5 \\\
       ${HOME}/yocto/poky/meta-licheepizero \\\
       "*<br>
@@ -83,6 +84,8 @@ Bluetooth - appears during system boot up <br>
     - add at the end following records <br> <br>
     	*RM_OLD_IMAGE = "1"* <br>
 	*INHERIT += "rm_work"* <br>
+	*MACHINEOVERRIDES .= ":use-mailine-graphics"* <br>
+	*LICENSE_FLAGS_ACCEPTED = "commercial"* <br>
 
     **Note:** Please adapt rest of conf/local.conf parameters if necessary. <br>
 
