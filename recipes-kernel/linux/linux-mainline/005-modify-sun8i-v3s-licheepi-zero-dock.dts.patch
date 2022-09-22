@@ -1,0 +1,13 @@
+diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero-dock.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero-dock.dts
+index 752ad05..b2540d4 100644
+--- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero-dock.dts
++++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero-dock.dts
+@@ -60,6 +60,8 @@
+ };
+ 
+ &emac {
++	phy-handle = <&int_mii_phy>;
++	phy-mode = "mii";
+ 	allwinner,leds-active-low;
+ 	status = "okay";
+ };
