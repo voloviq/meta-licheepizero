@@ -22,7 +22,7 @@ Assumed that Linux Ubuntu is installed
 WiFi <br>
 Ethernet <br>
 Lcd <br>
-Touchscreen(no support in the 5.15) <br>
+Touchscreen(no driver support in the 5.15) <br>
 Led  <br>
 Backlight for Lcd <br>
 Microphone <br>
