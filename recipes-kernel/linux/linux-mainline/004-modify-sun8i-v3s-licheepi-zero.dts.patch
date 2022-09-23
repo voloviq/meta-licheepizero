@@ -1,5 +1,5 @@
 diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 2e4587d..afed9f1 100644
+index 2e4587d..90984e7 100644
 --- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 @@ -43,12 +43,15 @@
@@ -7,7 +7,7 @@ index 2e4587d..afed9f1 100644
  #include "sun8i-v3s.dtsi"
  #include "sunxi-common-regulators.dtsi"
 +#include "original_lichee_pi_zero_lcd_display.dtsi"
-+//#include "lichee_pi_zero_original_lcd_touchscreen.dtsi"
++#include "lichee_pi_zero_original_lcd_touchscreen.dtsi"
  
  / {
  	model = "Lichee Pi Zero";
