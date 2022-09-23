@@ -16,17 +16,17 @@ Assumed that Linux Ubuntu is installed
 
 ## List of tested elements
 
+Ethernet <br>
+Led  <br>
+Headphone <br>
 
 ## List of not tested elements
 
 WiFi <br>
-Ethernet <br>
 Lcd <br>
-Touchscreen(no driver support in the 5.15) <br>
-Led  <br>
+Touchscreen(aligned driver for kernel 5.15) <br>
 Backlight for Lcd <br>
 Microphone <br>
-Headphone <br>
 Bluetooth - appears during system boot up <br>
 
 ## How to build an images
