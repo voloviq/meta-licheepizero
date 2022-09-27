@@ -1,5 +1,5 @@
 diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 2e4587d..90984e7 100644
+index 2e4587d..9e289db 100644
 --- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 @@ -43,12 +43,15 @@
@@ -39,11 +39,62 @@ index 2e4587d..90984e7 100644
  		};
  	};
  };
+@@ -90,10 +95,23 @@
+ 	status = "okay";
+ };
+ 
+-&usb_otg {
++&ehci0 {
++	phys = <&usbphy 0>;
++	phy-names = "usb";
++	status = "okay";
++};
++
++&ohci0 {
++	phys = <&usbphy 0>;
++	phy-names = "usb";
++	status = "okay";
++};
++
++/*&usb_otg {
+ 	dr_mode = "otg";
+ 	status = "okay";
+ };
++*/
+ 
+ &usbphy {
+ 	usb0_id_det-gpios = <&pio 5 6 GPIO_ACTIVE_HIGH>;
 diff --git a/arch/arm/boot/dts/sun8i-v3s.dtsi b/arch/arm/boot/dts/sun8i-v3s.dtsi
-index 084323d..47fc392 100644
+index 084323d..b41bb81 100644
 --- a/arch/arm/boot/dts/sun8i-v3s.dtsi
 +++ b/arch/arm/boot/dts/sun8i-v3s.dtsi
-@@ -368,6 +368,25 @@
+@@ -290,6 +290,25 @@
+ 			resets = <&ccu RST_BUS_CE>;
+ 			reset-names = "ahb";
+ 		};
++		
++		ehci0: usb@1c1a000 {
++			compatible = "allwinner,sun8i-v3s-ehci", "generic-ehci";
++			reg = <0x01c1a000 0x100>;
++			interrupts = <GIC_SPI 72 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&ccu CLK_BUS_EHCI0>, <&ccu CLK_BUS_OHCI0>;
++			resets = <&ccu RST_BUS_EHCI0>, <&ccu RST_BUS_OHCI0>;
++			status = "disabled";
++		};
++
++		ohci0: usb@1c1a400 {
++			compatible = "allwinner,sun8i-v3s-ohci", "generic-ohci";
++			reg = <0x01c1a400 0x100>;
++			interrupts = <GIC_SPI 73 IRQ_TYPE_LEVEL_HIGH>;
++			clocks = <&ccu CLK_BUS_EHCI0>, <&ccu CLK_BUS_OHCI0>,
++			<&ccu CLK_USB_OHCI0>;
++			resets = <&ccu RST_BUS_EHCI0>, <&ccu RST_BUS_OHCI0>;
++			status = "disabled";
++		};
+ 
+ 		usb_otg: usb@1c19000 {
+ 			compatible = "allwinner,sun8i-h3-musb";
+@@ -368,6 +387,25 @@
  				pins = "PE1";
  				function = "csi";
  			};
