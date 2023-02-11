@@ -2,7 +2,7 @@ DESCRIPTION = "A console image for Lichee Pi Zero, Zero-Dock Boards"
 LICENSE = "MIT"
 
 NETWORK_APP = " \
-    openssh openssh-keygen openssh-sftp-server \
+    openssh openssh-keygen openssh-sftp-server usb-gadget-dhcp \
 "
 
 IMAGE_LINGUAS = "pl-pl"
@@ -34,6 +34,9 @@ UTILITIES_INSTALL = " \
     resize-rootfs \
     ppp \
     tzdata \
+    parted \
+    e2fsprogs \
+    e2fsprogs-resize2fs \
 "
 
 WIFI_SUPPORT = " \

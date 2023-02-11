@@ -1,5 +1,5 @@
 diff --git a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
-index 2e4587d..9e289db 100644
+index 2e4587d..5b91d8d 100644
 --- a/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 +++ b/arch/arm/boot/dts/sun8i-v3s-licheepi-zero.dts
 @@ -43,12 +43,15 @@
@@ -39,31 +39,25 @@ index 2e4587d..9e289db 100644
  		};
  	};
  };
-@@ -90,10 +95,23 @@
+@@ -90,6 +95,18 @@
  	status = "okay";
  };
  
--&usb_otg {
 +&ehci0 {
-+	phys = <&usbphy 0>;
-+	phy-names = "usb";
++	/*phys = <&usbphy 0>;
++	phy-names = "usb";*/
 +	status = "okay";
 +};
 +
 +&ohci0 {
-+	phys = <&usbphy 0>;
-+	phy-names = "usb";
++	/*phys = <&usbphy 0>;
++	phy-names = "usb";*/
 +	status = "okay";
 +};
 +
-+/*&usb_otg {
+ &usb_otg {
  	dr_mode = "otg";
  	status = "okay";
- };
-+*/
- 
- &usbphy {
- 	usb0_id_det-gpios = <&pio 5 6 GPIO_ACTIVE_HIGH>;
 diff --git a/arch/arm/boot/dts/sun8i-v3s.dtsi b/arch/arm/boot/dts/sun8i-v3s.dtsi
 index 084323d..b41bb81 100644
 --- a/arch/arm/boot/dts/sun8i-v3s.dtsi

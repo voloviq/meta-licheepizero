@@ -1,39 +1,20 @@
+
+
 #!/bin/sh
 
-set -e
+PART_DEV="mmcblk0"
+PART_NUM=2
+echo "Partition name is : $PART_DEV"
+# Get the starting offset of the root partition
+PART_START=$(parted /dev/mmcblk0 -ms unit s p | tail -n 1 | cut -f 2 -d:)
+# Remove suffix:
+PART_START=${PART_START%s}
+echo "resizing root partition, starts at offset: $PART_START"
+[ "$PART_START" ] || return 5
 
-do_expand_rootfs(){
-    if ! [ -h /dev/disk/by-label/root ]; then
-      echo "/dev/disk/by-label/root does not exist or is not a symlink. Don't know how to expand"
-      return 2
-    fi
-
-    ROOT_PART=$(readlink /dev/disk/by-label/root)
-    PART_NUM=${ROOT_PART#../../mmcblk?p}
-    if [ "$PART_NUM" = "$ROOT_PART" ]; then
-      echo "/dev/disk/by-label/root is not an SD card. Don't know how to expand"
-      return 3
-    fi
-
-    PART_DEV=${ROOT_PART#../../}
-    PART_DEV=${PART_DEV%p${PART_NUM}}
-
-    LAST_PART_NUM=$(parted /dev/${PART_DEV} -ms unit s p | tail -n 1 | cut -f 1 -d:)
-    if [ "$LAST_PART_NUM" != "$PART_NUM" ]; then
-      echo "/dev/disk/by-label/root is not the last partition. Don't know how to expand"
-      return 4
-    fi
-
-    # Get the starting offset of the root partition
-    PART_START=$(parted /dev/${PART_DEV} -ms unit s p | grep "^${PART_NUM}" | cut -f 2 -d:)
-    # Remove suffix:
-    PART_START=${PART_START%s}
-    echo "resizing root partition, starts at offset: $PART_START"
-    [ "$PART_START" ] || return 5
-
-    # Return value will likely be error for fdisk as it fails to reload the
-    # partition table because the root fs is mounted
-    fdisk -u /dev/${PART_DEV} <<EOF > /dev/null 2>&1
+# Return value will likely be error for fdisk as it fails to reload the
+# partition table because the root fs is mounted
+cat <<EOF | fdisk /dev/${PART_DEV}
 p
 d
 $PART_NUM
@@ -44,38 +25,15 @@ $PART_START
 
 p
 w
+N
 EOF
 
-  sync
-  echo "Probing the partition table... "
-  partprobe
+sync
+echo "Probing the partition table... "
+partprobe
 
-  echo "Resizing the partition... "
-  resize2fs /dev/disk/by-label/root   || return $?
-}
-
-case "$1" in
-  start)
-    reboot=false
-
-    echo "Expanding rootfs..."
-
-    if do_expand_rootfs  ;
-    then
-      echo "Expanding partition success"
-    else
-      echo "Expanding rootfs has failed, see log files. Error code: $?"
-    fi
-
-    #update-rc.d -f resize-rootfs remove >/dev/null 2>&1
-    systemctl disable resize-rootfs.service > /dev/null 2>&1
-
-  ;;
-
-  *)
-    echo "Usage: $0 {start}" >&2
-    exit 1
-  ;;
-esac
-
+echo "Resizing the partition... "
+resize2fs -f /dev/mmcblk0p2
+#resize2fs /dev/mmcblk0p2 || return $?
+#tune2fs -L rootfs /dev/mmcblk0p2
 exit 0

@@ -2,7 +2,7 @@ DESCRIPTION = "A QT5 image with wifi support application for Lichee Pi Zero Zero
 LICENSE = "MIT"
 
 NETWORK_APP = " \
-    openssh openssh-keygen openssh-sftp-server \
+    openssh openssh-keygen openssh-sftp-server usb-gadget-dhcp \
 "
 
 IMAGE_LINGUAS = "pl-pl"
@@ -62,10 +62,6 @@ DEV_TOOLS_INSTALL = " \
     mtd-utils \
 "
 
-NETWORK_TOOLS_INSTALL = " \
-"
-
-
 UTILITIES_INSTALL = " \
     coreutils \
     gdbserver \
@@ -77,6 +73,9 @@ UTILITIES_INSTALL = " \
     resize-rootfs \
     ppp \
     tzdata \
+    parted \
+    e2fsprogs \
+    e2fsprogs-resize2fs \
 "
 
 TSLIB = " \
